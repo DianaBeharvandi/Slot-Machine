@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slot Machine!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="display-4">Play Slot!</h1>
+        <p class="lead">
+            Hit lever button to start
+        </p>
+    </div>
+    
+    <div class="center lever">
+        <button type="button" class="btn btn-primary" onclick="spin()">Lever</button>
+    </div>
+
+    <table class="center">
+        <tbody>
+            <tr>
+                <td>
+                    <span id="item1" class="slot-number">-</span>
+                </td>
+                <td>
+                    <span id="item2" class="slot-number">-</span>
+                </td>
+                <td>
+                    <span id="item3" class="slot-number">-</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="message" class="center message">
+        You Won!
+    </div>
+
+    <label for="total">Your current balance is </label>
+    <div id="total" > </div>
+
+    <label for="balance">Add money to your balance:</label>
+    <input type="number" id="add_balance" >
+    <button type="button" id= "input_money" class="btn btn-primary" onclick="changeTotal()">Submit</button>
+   
+
+    <div>
+    <label for="bet_amount">Your bet is :</label>
+    <input type="number" id="bet_amount" name="bet_amount" min="1" max="100000">
+    <button type="button" id= "input_bet" class="btn btn-primary" onclick="bet()">Submit</button>
+ 
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="SlotMachine.js"></script>
+</body>
+
+</html>
