@@ -50,11 +50,11 @@ function spin() {
         item3.innerHTML = `${num3}`;
 
         if (num1 === num2 && num1 === num3) {
-            showMessage();
+            showMessage(true);
             total += 2 * betMoney;
             document.getElementById("total").innerHTML = total;
         } else {
-            hideMessage();
+            showMessage(false);
             total -= betMoney;
             document.getElementById("total").innerHTML = total;
         } 
@@ -64,14 +64,12 @@ function spin() {
     }
 }
     
-function showMessage() {
+function showMessage(win) {
     const msg = document.getElementById("message");
-    msg.style.display = "block";
-
-}
-
-function hideMessage() {
-    const msg = document.getElementById("message");
+    if( win === true) {
+        msg.style.display = "block";
+    } else {
     msg.style.display = "none";
+    }
 }
    
